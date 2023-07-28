@@ -25,6 +25,6 @@ return {
   { import = "astrocommunity.pack.json" },
   { import = "astrocommunity.pack.markdown" },
   { import = "astrocommunity.pack.yaml" },
-  { import = "astrocommunity.utility.transparent-nvim" },
+  -- { import = "astrocommunity.utility.transparent-nvim" },
   -- { import = "astrocommunity.completion.copilot-lua-cmp" },
 }
