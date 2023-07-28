@@ -11,7 +11,9 @@ return {
     ["<leader>bn"] = { "<cmd>tabnew<cr>", desc = "New tab" },
     ["<leader>bD"] = {
       function()
-        require("astronvim.utils.status").heirline.buffer_picker(function(bufnr) require("astronvim.utils.buffer").close(bufnr) end)
+        require("astronvim.utils.status").heirline.buffer_picker(
+          function(bufnr) require("astronvim.utils.buffer").close(bufnr) end
+        )
       end,
       desc = "Pick to close",
     },
@@ -20,6 +22,17 @@ return {
     ["<leader>b"] = { name = "Buffers" },
     -- quick save
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
+    ["<leader>Q"] = { ":qa!<cr>", desc = "Force Quit" },
+    ["<leader>a"] = { "<cmd>SessionManager! load_current_dir_session<cr>", desc = "Load current directory session" },
+  },
+  i = {
+    ["<C-b>"] = { "<ESC>^i", desc = "Beginning of line" },
+    ["<C-e>"] = { "<End>", desc = "End of line" },
+    ["<C-s>"] = { "<esc>:w!<cr>", desc = "Save File" },
+    ["<C-h>"] = { "<left>", desc = "Move left" },
+    ["<C-l>"] = { "<right>", desc = "Move right" },
+    ["<C-j>"] = { "<down>", desc = "Move down" },
+    ["<C-k>"] = { "<up>", desc = "Move up" },
   },
   t = {
     -- setting a mapping to false will disable it
